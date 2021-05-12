@@ -1,12 +1,10 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Injectable } from '@nestjs/common';
 import { CreateAccountInput } from './dto/create-account.dto';
-import { User } from './user.entity';
+import { UserRepository } from './user.repository';
 
 @Injectable()
 export class UserService {
-    constructor(@InjectRepository(User) private readonly users: Repository<User>) {}
+    constructor(private readonly users: UserRepository) {}
 
     // 계정생성
     async createAccount(createAccountInput: CreateAccountInput): Promise<{ ok: Boolean, error?: String }> {
