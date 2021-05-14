@@ -1,5 +1,5 @@
 import { Field, InputType, ObjectType, registerEnumType } from "@nestjs/graphql";
-import { CoreEntity } from "../common/core.entity";
+import { CoreEntity } from "src/common/core.entity";
 import { Column, Entity } from "typeorm";
 
 enum UserRole {
