@@ -4,11 +4,11 @@ import { User } from "./user.entity";
 import { UserRepository } from "./user.repository";
 import { UserService } from "./user.service"
 
-enum UserRole {Admin, Member};
-
 describe('UserService', () => {
     let service: UserService;
     let userRepository: UserRepository;
+
+    enum UserRole {Admin, Member};
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
