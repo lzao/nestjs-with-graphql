@@ -81,7 +81,9 @@
       ".module.ts$",
       "main.ts",
       ".config.ts",
-      ".dto.ts"
+      ".dto.ts",
+      ".entity.ts",
+      ".subscriber.ts"
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
